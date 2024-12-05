@@ -1,0 +1,108 @@
+
+
+.page-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    /* background-color: #F4E1D2; Fondo claro, tono cálido */
+}
+
+/* Contenedor principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Imagen del login */
+.login-banner-image {
+    width: 100%;
+    max-width: 350px; /* Limitar el tamaño máximo de la imagen */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Título de bienvenida */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8B5E3C; /* Color marrón rústico */
+}
+
+/* Logo de la aplicación */
+.login-logo {
+    width: 70%; /* Ajustar el tamaño del logo */
+    max-width: 200px; /* Limitar el tamaño máximo */
+    margin-bottom: 20px;
+}
+
+/* Descripción */
+.description-text {
+    color: #6F4F28; /* Un tono marrón más suave */
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Botón de iniciar sesión */
+.login-button {
+    background-color: #8B5E3C; /* Color marrón cálido */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button:hover {
+    background-color: #704A29; /* Un marrón más oscuro para el hover */
+}
+
+/* Link de registro */
+.register-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-link-text {
+    color: #8B5E3C; /* Color marrón rústico */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.register-link-text:hover {
+    color: #704A29; /* Un tono más oscuro para hover */
+    text-decoration: underline;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .login-logo {
+        width: 60%;
+        max-width: 180px;
+    }
+
+    .description-text {
+        font-size: 0.9rem;
+    }
+
+    .login-button {
+        max-width: 250px;
+    }
+}
