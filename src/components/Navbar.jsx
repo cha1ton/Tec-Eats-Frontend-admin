@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         {/* Usamos Link para redirigir al inicio */}
-        <Link className="navbar-brand" to="/home">
+        <Link className="navbar-brand" to="add-restaurant">
           <img
             src="/images/logo-Tec-Eats-blanco.png"  // Asegúrate de tener la imagen en la ruta correcta
             alt="Tec Eats Logo"

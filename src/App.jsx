@@ -6,13 +6,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import LoginPage from "./pages/LoginPage";
-import AddRestaurantPage from "./pages/AddRestaurantPage";
-import AddMenuPage from "./pages/AddMenuPage";
-import MainPage from "./pages/MainPage";
-import AdminProfilePage from "./pages/AdminProfilePage";
+import Login from "./pages/Login";
+import AddRestaurant from "./pages/AddRestaurant";
+import AddMenu from "./pages/AddMenu";
+import AdminProfile from "./pages/AdminProfile";
 
-import "./styles/LoginPage.css";
+import "./styles/Login.css";
 import "./styles/navbar.css";
 
 function App() {
@@ -26,25 +25,18 @@ function App() {
     <Router>
       {isAuthenticated && <Navbar />}{" "}
       {/* Navbar se muestra solo si está autenticado */}
-      <div className="container mt-4">
         <Routes>
           <Route
             path="/"
-            element={<LoginPage onLogin={handleLogin} />} // Pasamos la función de login
+            element={<Login onLogin={handleLogin} />} // Pasamos la función de login
           />
 
-          <Route
-            path="/main"
-            element={
-              isAuthenticated ? <MainPage /> : <Navigate to="/login" replace />
-            }
-          />
 
           <Route
             path="/add-restaurant"
             element={
               isAuthenticated ? (
-                <AddRestaurantPage />
+                <AddRestaurant />
               ) : (
                 <Navigate to="/login" replace />
               )
@@ -54,7 +46,7 @@ function App() {
             path="/add-menu"
             element={
               isAuthenticated ? (
-                <AddMenuPage />
+                <AddMenu />
               ) : (
                 <Navigate to="/login" replace />
               )
@@ -70,14 +62,13 @@ function App() {
             path="/profile"
             element={
               isAuthenticated ? (
-                <AdminProfilePage />
+                <AdminProfile />
               ) : (
                 <Navigate to="/login" replace />
               )
             }
           />
         </Routes>
-      </div>
     </Router>
   );
 }

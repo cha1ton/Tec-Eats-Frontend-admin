@@ -1,0 +1,135 @@
+/* src/styles/Login.css */
+
+/* Contenedor de toda la página */
+.page-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    background-color: #F4E1D2; /* Fondo claro */
+  }
+  
+  /* Contenedor principal */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  /* Imagen del login */
+  .login-banner-image {
+    width: 100%;
+    max-width: 350px; /* Limitar el tamaño máximo de la imagen */
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Título de bienvenida */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Logo de la aplicación */
+  .login-logo {
+    width: 70%; /* Ajustar el tamaño del logo */
+    max-width: 200px; /* Limitar el tamaño máximo */
+    margin: 1rem 0;
+  }
+  
+  /* Descripción */
+  .description-text {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  /* Botón de iniciar sesión */
+  .login-button {
+    background-color: #00AEEF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-button i {
+    margin-right: 10px;
+  }
+  
+  .login-button:hover {
+    background-color: #007bb5;
+  }
+  
+  /* Link de registro */
+  .register-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .register-link-text {
+    color: #00AEEF;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .register-link-text:hover {
+    color: #007bb5;
+    text-decoration: underline;
+  }
+
+  /* Botón de iniciar sesión */
+.login-button {
+    background-color: #8B5E3C; /* Cambiar al color especificado */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button:hover {
+    background-color: #6E472D; /* Color más oscuro para el hover */
+}
+
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .login-logo {
+      width: 60%;
+      max-width: 180px;
+    }
+  
+    .description-text {
+      font-size: 0.9rem;
+    }
+  
+    .login-button {
+      max-width: 250px;
+    }
+  }
+  

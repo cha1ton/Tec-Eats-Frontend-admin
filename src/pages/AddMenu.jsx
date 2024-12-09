@@ -1,8 +1,8 @@
-// src/pages/AddMenuPage.jsx
+// src/pages/AddMenu.jsx
 
 import React, { useState } from "react";
 
-function AddMenuPage() {
+function AddMenu() {
   const [dishName, setDishName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -69,4 +69,4 @@ function AddMenuPage() {
   );
 }
 
-export default AddMenuPage;
+export default AddMenu;

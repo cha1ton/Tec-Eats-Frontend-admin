@@ -1,8 +1,8 @@
-// src/pages/AddRestaurantPage.jsx
+// src/pages/AddRestaurant.jsx
 
 import React, { useState } from "react";
 
-function AddRestaurantPage() {
+function AddRestaurant() {
   const [restaurantName, setRestaurantName] = useState("");
   const [address, setAddress] = useState("");
   const [type, setType] = useState("");
@@ -66,4 +66,4 @@ function AddRestaurantPage() {
   );
 }
 
-export default AddRestaurantPage;
+export default AddRestaurant;

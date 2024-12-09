@@ -1,6 +1,8 @@
+// src/pages/AdminProfile.jsx
+
 import React, { useState, useEffect } from 'react';
 
-function UserProfilePage() {
+function UserProfile() {
   // Estado para almacenar los datos del usuario
   const [userData, setUserData] = useState(null);
 
@@ -44,4 +46,4 @@ function UserProfilePage() {
   );
 }
 
-export default UserProfilePage;
+export default UserProfile;
