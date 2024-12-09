@@ -1,21 +1,13 @@
 // src/pages/Login.jsx
-
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Login({ onLogin }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook para navegación
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Aquí puedes agregar lógica de validación del usuario
-    if (email && password) {
-      onLogin(); // Llama la función de autenticación
-      navigate("/add-restaurant"); // Redirige al dashboard
-    }
+  const handleLoginClick = () => {
+    onLogin(); // Llama a la función de login
+    navigate("/add-restaurant"); // Redirige a la página add-restaurant
   };
 
   return (
@@ -37,39 +29,9 @@ function Login({ onLogin }) {
           Inicia sesión en Tec Eat y disfruta de todas nuestras funcionalidades.
         </p>
 
-        <form className="login-form" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">
-              Correo electrónico
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="form-control"
-              placeholder="Introduce tu correo"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">
-              Contraseña
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="form-control"
-              placeholder="Introduce tu contraseña"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit" className="login-button">
-            Iniciar sesión
-          </button>
-        </form>
+        <button onClick={handleLoginClick} className="login-button">
+          Iniciar sesión con Google
+        </button>
 
         <div className="register-link">
           <p>¿No tienes cuenta?</p>
